@@ -2,7 +2,7 @@
 #include<iostream>
 #include<stdio.h>
 #include<windows.h>
-#include"fuNction.h"
+#include"function.h"
 #define ll long long
 using namespace function;
 using namespace std;
@@ -17,25 +17,25 @@ bool end_yn()
 main()
 {
 	a=b=c=0; 
-	cin>>a>>b>>c;//ÊäÈëÈı¸öÏµÊıÒÔÇó½â
+	cin>>a>>b>>c;//è¾“å…¥ä¸‰ä¸ªç³»æ•°ä»¥æ±‚è§£
 	if(a==0)
 	{
-		puts("²»ÎªÒ»Ôª¶ş´Î·½³Ì");
+		puts("ä¸ä¸ºä¸€å…ƒäºŒæ¬¡æ–¹ç¨‹");
 		system("pause");
 		re 0;
-	}//ÊÇ·ñÎª1Ôª2´Î 
+	}//æ˜¯å¦ä¸º1å…ƒ2æ¬¡ 
 	while((ll)a!=a||(ll)b!=b||c!=(ll)c)
 	{
 		a*=10;
 		b*=10;
 		c*=10;
-	}//×ª»¯ÎªÕûÊı 
+	}//è½¬åŒ–ä¸ºæ•´æ•° 
 	ll d=(b*b-4*a*c);
 	if(d<0)
 	{
-		puts("ÎŞ½â");system("pause"); 
+		puts("æ— è§£");system("pause"); 
 		re 0;
-	}//ÅĞ±ğÊ½
+	}//åˆ¤åˆ«å¼
 	printf("x1=");
 	if(d==0)
 	{
@@ -56,7 +56,7 @@ main()
 		putchar('\n');
 		system("pause");
 		re 0;
-	}//delta=0£¬Á½¸öÏàÍ¬½â 
+	}//delta=0ï¼Œä¸¤ä¸ªç›¸åŒè§£ 
 	ll dr=1;
 	while(d>=4&&d%4==0)
 	{
@@ -109,7 +109,7 @@ main()
 		putchar('\n');
 		system("pause"); 
 		re 0;
-	}//delta=1,¸ùÎŞÎŞÀíÊı²¿·Ö 
+	}//delta=1,æ ¹æ— æ— ç†æ•°éƒ¨åˆ† 
 	ll fm=2*a,fzr=-b;
 	if(fm<0)
 	{
@@ -147,7 +147,7 @@ main()
 		cout<<'-';
 		if(dr!=1)cout<<dr;
 		cout<<'('<<d<<"^0.5))"<<'/'<<fm;
-	}//´¦ÀíÆäÓàÇé¿ö 
+	}//å¤„ç†å…¶ä½™æƒ…å†µ 
 	putchar('\n');
 	system("pause");
 	re 0;
