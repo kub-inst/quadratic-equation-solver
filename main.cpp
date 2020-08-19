@@ -12,30 +12,31 @@ bool end_yn()
 	char c;
 	cin>>c;
 	if(c=='q')re 1;
-	re 0;
+	return 0;
 }
-main()
+int main()
 {
 	a=b=c=0; 
-	cin>>a>>b>>c;//输入三个系数以求解
+	cin>>a>>b>>c;//enter 3 number as coefficients of the equation
 	if(a==0)
 	{
-		puts("不为一元二次方程");
+		puts("a must not be 0");
 		system("pause");
-		re 0;
-	}//是否为1元2次 
+		return 0;
+	}
 	while((ll)a!=a||(ll)b!=b||c!=(ll)c)
 	{
 		a*=10;
 		b*=10;
 		c*=10;
-	}//转化为整数 
-	ll d=(b*b-4*a*c);
+	}//change the float coefficients into int
+	ll d=(b*b-4*a*c);//delta
 	if(d<0)
 	{
-		puts("无解");system("pause"); 
-		re 0;
-	}//判别式
+		puts("No real number solution");
+		system("pause"); 
+		return 0;
+	}//delta<0
 	printf("x1=");
 	if(d==0)
 	{
@@ -56,7 +57,7 @@ main()
 		putchar('\n');
 		system("pause");
 		re 0;
-	}//delta=0，两个相同解 
+	}//d=0，2 same equal real number solutions 
 	ll dr=1;
 	while(d>=4&&d%4==0)
 	{
@@ -108,8 +109,8 @@ main()
 		}
 		putchar('\n');
 		system("pause"); 
-		re 0;
-	}//delta=1,根无无理数部分 
+		return 0;
+	}//delta=1,the root hasn't a part which consists of imrational num.
 	ll fm=2*a,fzr=-b;
 	if(fm<0)
 	{
@@ -147,8 +148,8 @@ main()
 		cout<<'-';
 		if(dr!=1)cout<<dr;
 		cout<<'('<<d<<"^0.5))"<<'/'<<fm;
-	}//处理其余情况 
+	}//deal with others 
 	putchar('\n');
 	system("pause");
-	re 0;
+	return 0;
 }
