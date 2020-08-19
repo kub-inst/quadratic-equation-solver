@@ -2,7 +2,7 @@
 #include<iostream>
 #include<stdio.h>
 #include<windows.h>
-#include"function.h"
+#include"function.hpp"
 #define ll long long
 using namespace function;
 using namespace std;
