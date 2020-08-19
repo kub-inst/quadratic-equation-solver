@@ -62,7 +62,7 @@ namespace function
 	}
 	ll gcd(ll a,ll b)
 	{
-		re b==0?a:gcd(b,a%b);
+		return b==0?a:gcd(b,a%b);
 	}
 	ll d_num(ll a)
 	{
