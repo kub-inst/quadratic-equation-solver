@@ -1,22 +1,24 @@
+/*they're all easy to write
+only for me to use them easilier——kub—inst*/
 #include<math.h>
 #define ll long long
 #define re return 
 #define vd void
 namespace function
 {
-	vd jud_done(ll &a)
+	bool isdigit(char c)
 	{
-		a=a>0?a:-a;
+		return c>='0'&&c<='9';
 	}
 	ll jud(ll a)
 	{
-		re a>0?a:-a;
+		return a>0?a:-a;
 	}
 	ll absolute(ll a)
 	{
-		re a>0?a:-a;
+		return a>0?a:-a;
 	}
-	vd absolute_done(ll a)
+	vd absolute_done(ll &a)
 	{
 		a=a>0?a:-a;
 	}
@@ -24,28 +26,28 @@ namespace function
 	{
 		if(n<2)
 		{
-			re 0;
+			return 0;
 		} 
 		if(n==2)
 		{
-			re 1;
+			return 1;
 		}if(n%2==0)
 		{
-			re 0;
+			return 0;
 		} 
 		for(ll t=3;t<=sqrt(n);t+=2)
 		{
 			if(n%t==0)
 			{
-				re 0;
+				return 0;
 			}
 		}
-		re 1;
+		return 1;
 	}
 	void swap(ll &a,ll &b)
 	{
 		ll cub=a;a=b,b=cub;
-		re;
+		return;
 	}
 	void pop_sort(ll a[],ll n)
 	{
